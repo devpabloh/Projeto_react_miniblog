@@ -6,16 +6,28 @@ import { useAuthValue } from "../contexts/AuthContext";
 
 import styles from "./Navbar.module.css";
 
+import { useState } from "react";
+
 const Navbar = () => {
   const { logout } = useAuthentication();
   const { user } = useAuthValue();
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = ()=>{
+    setIsOpen(!isOpen);
+  }
+
   return (
     <nav className={styles.navbar}>
+      
       <NavLink className={styles.brand} to="/">
         Mini <span>Blog</span>
       </NavLink>
-      <ul className={styles.links_list}>
+      <div className={styles.menuIcon} onClick={toggleMenu}>
+      &#9776;
+      </div>
+      <ul className={`${styles.links_list} ${isOpen ? styles.open : ""}`}>
         <li>
           <NavLink
             to="/"
