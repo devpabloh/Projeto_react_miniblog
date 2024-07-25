@@ -18,6 +18,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   }
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={styles.navbar}>
       
@@ -32,7 +36,7 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? styles.active : "")}
-          >
+            onClick={handleLinkClick}>
             Home
           </NavLink>
         </li>
@@ -42,7 +46,7 @@ const Navbar = () => {
               <NavLink
                 to="/login"
                 className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+                onClick={handleLinkClick}>
                 Entrar
               </NavLink>
             </li>
@@ -50,7 +54,7 @@ const Navbar = () => {
               <NavLink
                 to="/register"
                 className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+                onClick={handleLinkClick}>
                 Cadastrar
               </NavLink>
             </li>
@@ -62,7 +66,7 @@ const Navbar = () => {
               <NavLink
                 to="/posts/create"
                 className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+                onClick={handleLinkClick}>
                 Novo post
               </NavLink>
             </li>
@@ -70,7 +74,7 @@ const Navbar = () => {
               <NavLink
                 to="/dashboard"
                 className={({ isActive }) => (isActive ? styles.active : "")}
-              >
+                onClick={handleLinkClick}>
                 Dashboard
               </NavLink>
             </li>
@@ -80,7 +84,7 @@ const Navbar = () => {
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? styles.active : "")}
-          >
+            onClick={handleLinkClick}>
             Sobre
           </NavLink>
         </li>
