@@ -114,3 +114,12 @@ button[disabled] {
   padding: 5px;
   border-radius: 5px;
 }
+
+@media(max-width:320px){
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

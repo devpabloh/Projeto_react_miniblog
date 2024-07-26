@@ -12,3 +12,10 @@
   .search_container p {
     margin-bottom: 30px;
   }
+
+@media(max-width:425px){
+  .search_container{
+    text-align: center;
+    font-size: .8em;
+  }
+}

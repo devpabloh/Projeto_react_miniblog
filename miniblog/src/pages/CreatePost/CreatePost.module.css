@@ -10,3 +10,25 @@
     color: #aaa;
     margin-bottom: 2em;
   }
+
+  @media (max-width: 425px){
+
+
+
+    .create_post{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .create_post label input{
+      width: 200px;
+      font-size: .5em;
+    }
+
+    .create_post label textarea{
+      width: 200px;
+      font-size: .5em;
+    }
+  }

@@ -57,3 +57,32 @@
     width: 100px;
     font-size: 0.7em;
   }
+
+@media (max-width:425px){
+    .post_row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+    .post_row a{
+      width: 80px;
+    }
+  }
+
+@media (max-width: 375px){
+  div .actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.6em;
+  }
+
+  .post_row button,
+  .post_row a{
+    width: auto;
+    height: auto;
+    padding: auto;
+  }
+}
